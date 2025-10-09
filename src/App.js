@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <SignUpBanner />
-      {/* <CategoriesBar /> */}
+      <CategoriesBar />
       <main>
         {/* <TopContent /> */}
         {/* <NewArrivals /> */}
