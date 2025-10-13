@@ -5,7 +5,7 @@ const SignUpBanner = () => {
 
   if (!isVisible) return null;
   return (
-    <div className="bg-black w-[1440px] flex justify-center items-center w-full">
+    <div className="SignUp bg-black w-[1440px] flex justify-center items-center w-full">
       <p className=" text-white text-center text-sm ">
         Sign up and get 20% off to your first order.{" "}
         <span className="underline cursor-pointer font-medium">

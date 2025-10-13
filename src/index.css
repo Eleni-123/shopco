@@ -16,6 +16,18 @@ code {
     monospace;
 }
 
+.SignUp {
+  height: 38px;
+}
+
 .SignUp p {
   font-family: Satoshi;
+}
+
+.logo {
+  font-family: Integral CF;
+}
+
+.SearchBar {
+  border-radius: 62px;
 }
