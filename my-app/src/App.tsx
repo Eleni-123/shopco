@@ -1,13 +1,15 @@
 import React from "react";
 import SignUpBanner from "./components/SignUpBanner";
 import "./App.css";
+import CategoriesBar from "./components/CategoriesBar";
 
 function App() {
   return (
-    <div>
+    <>
       <SignUpBanner />
       {/* Το υπόλοιπο περιεχόμενο της εφαρμογής */}
-    </div>
+      <CategoriesBar />
+    </>
   );
 }
 
