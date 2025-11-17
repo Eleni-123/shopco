@@ -1,25 +1,25 @@
 import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faMagnifyingGlass,
-//   faBasketShopping,
-//   faCircleUser,
-//   faChevronDown,
-// } from "@fortawesome/free-solid-svg-icons";
+import DropdownMenuCheckboxes from "./DropDownMenu";
+import { Search } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
+import { CircleUserRound } from "lucide-react";
+
 const CategoriesBar = () => {
   return (
     <header>
-      <nav className="w-[1440px] ">
-        <div className="flex w-[1240px] w-full justify-evenly space-x-1 justify-center items-center ">
-          <div className="logo font-bold text-3xl">SHOP.CO</div>
+      <nav className="w-full">
+        <div className="flex w-[1240px] w-full justify-evenly space-x-1 justify-center items-center">
+          <div className="logo font-bold text-3xl cursor-pointer ">SHOP.CO</div>
           <ul className=" flex justify-evenly space-x-4">
-            <li>{/* Shop <FontAwesomeIcon icon={faChevronDown} />{" "} */}</li>
-            <li>On Sale </li>
-            <li>New Arrivals </li>
-            <li>Brands</li>
+            <li className="cursor-pointer">
+              Shop <DropdownMenuCheckboxes />
+            </li>
+            <li className="cursor-pointer">On Sale</li>
+            <li className="cursor-pointer">New Arrivals </li>
+            <li className="cursor-pointer">Brands</li>
           </ul>
-          <div className="SearchBar bg-gray-200  flex items-center px-4 py-2">
-            {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
+          <div className="SearchBar bg-gray-200  flex items-center px-4 py-2 justify-evenly">
+            <Search />{" "}
             <input
               type="text"
               onChange={
@@ -32,9 +32,13 @@ const CategoriesBar = () => {
               className="bg-transparent outline-none text-gray-700 "
             />
           </div>
-          <div className="flex space-x-1">
-            <button>{/* <FontAwesomeIcon icon={faBasketShopping} /> */}</button>
-            <button>{/* <FontAwesomeIcon icon={faCircleUser} /> */}</button>
+          <div className="flex space-x-2">
+            <button className="cursor-pointer">
+              <ShoppingCart />
+            </button>
+            <button className="cursor-pointer">
+              <CircleUserRound />
+            </button>
           </div>
         </div>
       </nav>
