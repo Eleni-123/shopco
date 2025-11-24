@@ -1,4 +1,3 @@
-import React from "react";
 import DropdownMenuCheckboxes from "./DropDownMenu";
 import { Search } from "lucide-react";
 import { ShoppingCart } from "lucide-react";
@@ -8,7 +7,7 @@ const CategoriesBar = () => {
   return (
     <header>
       <nav className="w-full">
-        <div className="flex w-[1240px] w-full justify-evenly space-x-1 justify-center items-center">
+        <div className="flex w-[1240px] w-full justify-evenly space-x-1 items-baseline">
           <div className="logo font-bold text-3xl cursor-pointer ">SHOP.CO</div>
           <ul className=" flex justify-evenly space-x-4">
             <li className="cursor-pointer">
@@ -18,7 +17,7 @@ const CategoriesBar = () => {
             <li className="cursor-pointer">New Arrivals </li>
             <li className="cursor-pointer">Brands</li>
           </ul>
-          <div className="SearchBar bg-gray-200  flex items-center px-4 py-2 justify-evenly">
+          <div className="SearchBar bg-gray-200 rounded-xl flex items-center px-4 py-2 justify-evenly">
             <Search />{" "}
             <input
               type="text"

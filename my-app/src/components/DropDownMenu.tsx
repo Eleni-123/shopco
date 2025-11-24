@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import type { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
 
 import { Button } from "@/components/ui/button";
@@ -14,13 +13,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 type Checked = DropdownMenuCheckboxItemProps["checked"];
 
 export function DropdownMenuCheckboxes() {
-  const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true);
-  const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false);
-  const [showPanel, setShowPanel] = React.useState<Checked>(false);
+  const [showStatusBar, setShowStatusBar] = useState<Checked>(true);
+  const [showActivityBar, setShowActivityBar] = useState<Checked>(false);
+  const [showPanel, setShowPanel] = useState<Checked>(false);
 
   return (
     <DropdownMenu>

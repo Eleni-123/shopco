@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const SignUpBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
