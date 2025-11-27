@@ -7,7 +7,7 @@ const CategoriesBar = () => {
   return (
     <header>
       <nav className="w-full">
-        <div className="flex w-[1240px] w-full justify-evenly space-x-1 items-baseline">
+        <div className="flex w-[1240px] w-full justify-evenly space-x-1 items-baseline py-4">
           <div className="logo font-bold text-3xl cursor-pointer ">SHOP.CO</div>
           <ul className=" flex justify-evenly space-x-4">
             <li className="cursor-pointer">
