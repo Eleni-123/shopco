@@ -1,17 +1,17 @@
-import { increment } from "@/store/reducers/counterSlice";
-import { store, type RootState } from "@/store/store";
+// import { increment } from "@/store/reducers/counterSlice";
+// import { store, type RootState } from "@/store/store";
 import { Sparkles } from "lucide-react";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+// import { useEffect } from "react";
+// import { useDispatch, useSelector } from "react-redux";
 
 const MainSection = () => {
-  const count = useSelector((state: RootState) => state.counter.value);
-  console.log("Rendered MainSection with count:", count);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(increment());
-    console.log("Current count value:", count, store.getState().counter.value);
-  }, [dispatch, count]);
+  // const count = useSelector((state: RootState) => state.counter.value);
+  // console.log("Rendered MainSection with count:", count);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(increment());
+  //   console.log("Current count value:", count, store.getState().counter.value);
+  // }, [dispatch, count]);
   return (
     <section>
       <div className="relative overflow-visible">
@@ -29,10 +29,6 @@ const MainSection = () => {
                 <p className="font-bold text-4xl md:text-6xl leading-tight">
                   FIND CLOTHES THAT MATCHES YOUR STYLE
                 </p>
-                <Sparkles
-                  className="text-black fill-black w-10 h-10"
-                  stroke="black"
-                />
               </div>
 
               <div className="flex items-start justify-between">
@@ -73,7 +69,10 @@ const MainSection = () => {
           {/* Right image */}
           <div className=" w-1/2 flex justify-center">
             <div className="w-3/4 ">
-              <Sparkles className="absolute end-50 top-50" />
+              <Sparkles
+                className="absolute end-50 top-50 text-black fill-black w-7 h-7"
+                stroke="black"
+              />
               <img
                 src="/images/fashionCouple.jpg"
                 alt="Fashion Couple"
@@ -82,6 +81,15 @@ const MainSection = () => {
               />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="bg-black py-8">
+        <div className="text-white flex justify-evenly">
+          <img src="/images/versace.png" alt="versace logo" />
+          <img src="/images/zara.png" alt="zara logo" />
+          <img src="/images/gucci.png" alt="gucci logo" />
+          <img src="/images/prada.png" alt="prada logo" />
+          <img src="/images/calvin_klein.png" alt="calvin klein logo" />
         </div>
       </div>
     </section>
