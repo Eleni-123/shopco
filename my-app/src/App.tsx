@@ -2,6 +2,7 @@ import SignUpBanner from "./components/SignUpBanner";
 import "./App.css";
 import CategoriesBar from "./components/CategoriesBar";
 import MainSection from "./components/MainSection";
+import NewArrivals from "./components/NewArrivals";
 // import { Provider } from "react-redux";
 // import { store } from "./store/store";
 
@@ -13,6 +14,7 @@ function App() {
       <CategoriesBar />
       <MainSection />
       {/* </Provider> */}
+      <NewArrivals />
     </>
   );
 }
