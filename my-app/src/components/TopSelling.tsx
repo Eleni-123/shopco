@@ -1,7 +1,7 @@
 import { use, useEffect, useState } from "react";
 import { Spinner } from "@/components/ui/spinner";
 
-const NewArrivals = () => {
+const TopSelling = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -33,7 +33,7 @@ const NewArrivals = () => {
         className="font-bold text-5xl p-10 flex justify-center"
         style={{ fontFamily: "Integral CF" }}
       >
-        New Arrivals
+        Top Selling
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {displayedProducts.map((product) => (
@@ -76,4 +76,4 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default TopSelling;
