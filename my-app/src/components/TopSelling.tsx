@@ -8,7 +8,7 @@ const TopSelling = () => {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products/new-arrivals")
+    fetch("http://localhost:5000/api/products/top-selling")
       .then((res) => res.json())
       .then((json) => {
         setProducts(json.data);

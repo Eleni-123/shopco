@@ -5,6 +5,8 @@ import MainSection from "./components/MainSection";
 import NewArrivals from "./components/NewArrivals";
 import TopSelling from "./components/TopSelling";
 import Styles from "./components/Styles";
+import Reviews from "./components/Reviews";
+import Footer from "./components/Footer";
 // import { Provider } from "react-redux";
 // import { store } from "./store/store";
 
@@ -19,6 +21,8 @@ function App() {
       <NewArrivals />
       <TopSelling />
       <Styles />
+      <Reviews />
+      <Footer/>
     </>
   );
 }
