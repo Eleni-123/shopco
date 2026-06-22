@@ -5,62 +5,76 @@ import { Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="logo font-bold text-3xl cursor-pointer ">SHOP.CO</div>
-      <div>
-        We have clothes that suits your style and which you’re proud to wear.
-        From women to men.
-      </div>
-      <ul>
-        <li>COMPANY</li>
-        <li>About</li>
-        <li>Features</li>
-        <li>Works</li>
-        <li>Career</li>
-      </ul>
+    <footer className="bg-gray-100">
+      <div className="flex justify-between border-b-2 border-gray-200 px-12 py-8 items-stretch">
+        <div className="flex-col flex wrap items-stretch">
+          <div className="logo font-bold text-3xl cursor-pointer ">SHOP.CO</div>
 
-      <ul>
-        <li>HELP</li>
-        <li>Customer Support</li>
-        <li>Delivery Details</li>
-        <li>Terms & Conditons</li>
-        <li>Privacy Policy</li>
-      </ul>
+          <div>
+            <p>
+              We have clothes that suits your style and which you’re proud to
+              wear. From women to men.
+            </p>
+          </div>
 
-      <ul>
-        <li>FAQ</li>
-        <li>Account</li>
-        <li>Manage Deliveries</li>
-        <li>Orders</li>
-        <li>Payments</li>
-      </ul>
-
-      <ul>
-        <li>RESOURCES</li>
-        <li>Free eBooks</li>
-        <li>Development Tutorial</li>
-        <li>How to - Blog</li>
-        <li>Youtube Playlist</li>
-      </ul>
-
-      <div className="flex justify-evenly">
-        <div className="flex space-x-3 justify-center items-center">
-          <Facebook className="rounded-lg border-1 border-black place-self-center" />
-          <Twitter className="rounded-lg border-1 border-black" />
-          <Github className="rounded-lg border-1 border-black" />
-          <Instagram className="rounded-lg border-1 border-black" />
+          <div className="flex space-x-3 justify-start">
+            <Facebook className="rounded-lg border-1 border-black place-self-center" />
+            <Twitter className="rounded-lg border-1 border-black" />
+            <Github className="rounded-lg border-1 border-black" />
+            <Instagram className="rounded-lg border-1 border-black" />
+          </div>
         </div>
 
-        <div className="flex space-x-3">
-          <img src="/images/Visa.png" alt="Visa" />
-          <img src="/images/Mastercard.png" alt="Mastercard" />
-          <img src="/images/Paypal.png" alt="Paypal" />
-          <img src="/images/Apple_Pay.png" alt="Apple Pay" />
-          <img src="/images/G_Pay.png" alt="Google Pay" />
-        </div>
+        <ul>
+          <li>COMPANY</li>
+          <li>About</li>
+          <li>Features</li>
+          <li>Works</li>
+          <li>Career</li>
+        </ul>
+        <ul>
+          <li>HELP</li>
+          <li>Customer Support</li>
+          <li>Delivery Details</li>
+          <li>Terms & Conditons</li>
+          <li>Privacy Policy</li>
+        </ul>
+        <ul>
+          <li>FAQ</li>
+          <li>Account</li>
+          <li>Manage Deliveries</li>
+          <li>Orders</li>
+          <li>Payments</li>
+        </ul>
+        <ul>
+          <li>RESOURCES</li>
+          <li>Free eBooks</li>
+          <li>Development Tutorial</li>
+          <li>How to - Blog</li>
+          <li>Youtube Playlist</li>
+        </ul>
       </div>
 
-      <p>Shopco &copy; 2000-2023. All rights Reserved.</p>
+      <div className="flex justify-between px-12  pt-6 pb-10">
+        <p>Shopco &copy; 2000-2023. All rights Reserved.</p>
+        <div className="flex flex-wrap space-x-3">
+          <button className="bg-white">
+            <img src="/images/Visa.png" alt="Visa" />
+          </button>
+          <button className="bg-white">
+            <img src="/images/Mastercard.png" alt="Mastercard" />
+          </button>
+          <button className="bg-white">
+            <img src="/images/Paypal.png" alt="Paypal" />
+          </button>
+          <button className="bg-white">
+            <img src="/images/Apple_Pay.png" alt="Apple Pay" />
+          </button>
+          <button className="bg-white">
+            <img src="/images/G_Pay.png" alt="Google Pay" />
+          </button>
+        </div>
+      </div>
     </footer>
   );
 };
