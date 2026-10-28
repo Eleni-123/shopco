@@ -1,8 +1,17 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Spinner } from "@/components/ui/spinner";
 
+type Product = {
+  _id: string;
+  images: string[];
+  title: string;
+  shortDescription: string;
+  price: number;
+  discount: number;
+};
+
 const TopSelling = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [showAll, setShowAll] = useState(false);
@@ -11,7 +20,7 @@ const TopSelling = () => {
     fetch("http://localhost:5000/api/products/top-selling")
       .then((res) => res.json())
       .then((json) => {
-        setProducts(json.data);
+        setProducts((json.data as Product[]) ?? []);
         setLoading(false);
       })
       .catch((error) => {
@@ -21,8 +30,26 @@ const TopSelling = () => {
       });
   }, []);
 
-  if (loading || error) {
+  if (loading) {
     return <Spinner />;
+  }
+
+  if (error) {
+    return <div className="py-8 text-center text-gray-500">Unable to load top selling products.</div>;
+  }
+
+  if (products.length === 0) {
+    return (
+      <div className="border-b-3 pb-4">
+        <h1
+          className="font-bold text-5xl p-10 flex justify-center"
+          style={{ fontFamily: "Integral CF" }}
+        >
+          Top Selling
+        </h1>
+        <p className="py-8 text-center text-gray-500">No top selling products available right now.</p>
+      </div>
+    );
   }
 
   const displayedProducts = showAll ? products : products.slice(0, 4);

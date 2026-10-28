@@ -7,6 +7,7 @@ import TopSelling from "./components/TopSelling";
 import Styles from "./components/Styles";
 import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
+import Newsletter from "./components/Newsletter";
 // import { Provider } from "react-redux";
 // import { store } from "./store/store";
 
@@ -22,6 +23,7 @@ function App() {
       <TopSelling />
       <Styles />
       <Reviews />
+      <Newsletter/>
       <Footer/>
     </>
   );
