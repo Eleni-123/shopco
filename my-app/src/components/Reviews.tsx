@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { Spinner } from "@/components/ui/spinner";
 import StarRating from "@/components/StarRating";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 
 type Review = {
   _id: string;
@@ -34,22 +40,41 @@ const Reviews = () => {
     return <div className="py-8 text-center">Unable to load reviews.</div>;
 
   return (
-    <section className="py-8">
-      <h1 className="mb-6 text-2xl font-bold">OUR HAPPY CUSTOMERS</h1>
+    <section className="py-12 overflow-hidden">
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full"
+      >
+        <div className="flex justify-between items-center mb-8 px-4">
+          <h2 className="text-3xl font-extrabold tracking-tight">
+            OUR HAPPY CUSTOMERS
+          </h2>
+          <div className="flex gap-2">
+            <CarouselPrevious className="static translate-y-0 h-9 w-9 rounded-full" />
+            <CarouselNext className="static translate-y-0 h-9 w-9 rounded-full" />
+          </div>
+        </div>
 
-      <Carousel>
-        <CarouselContent>
-          <CarouselItem className="basis-full">
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {reviews.map((review) => (
-                <article key={review._id} className="rounded-lg border p-4">
+        <CarouselContent className="-ml-4">
+          {reviews.map((review) => (
+            <CarouselItem
+              key={review._id}
+              className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+            >
+              <article className="rounded-2xl border p-6 h-full bg-white shadow-sm flex flex-col justify-between">
+                <div>
                   <StarRating rating={review.rating} />
-                  <h2 className="font-semibold">{review.user}</h2>
-                  <p className="mt-2">{review.comment}</p>
-                </article>
-              ))}
-            </div>
-          </CarouselItem>
+                  <h3 className="font-bold text-lg mt-3">{review.user}</h3>
+                  <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                    "{review.comment}"
+                  </p>
+                </div>
+              </article>
+            </CarouselItem>
+          ))}
         </CarouselContent>
       </Carousel>
     </section>
