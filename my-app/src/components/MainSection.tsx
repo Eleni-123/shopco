@@ -83,8 +83,8 @@ const MainSection = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black py-8">
-        <div className="text-white flex justify-evenly">
+      <div className="bg-black py-8" w-full>
+        <div className="text-white flex justify-evenly flex-wrap w-full">
           <img src="/images/versace.png" alt="versace logo" />
           <img src="/images/zara.png" alt="zara logo" />
           <img src="/images/gucci.png" alt="gucci logo" />
